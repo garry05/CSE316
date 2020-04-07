@@ -250,7 +250,7 @@ void student_Queue(int no_of_process)
     printf("\n|Process Name\t|Arrival Time\t|Burst Time\t|Completion Time|\n");
 
     for(count = 0; count < no_of_process; count++)
-	{
+    {
     waiting_time = student_Process[count].completion_time-student_Process[count].burst_time-student_Process[count].arrival_time;
     printf("\n|\t%s\t|\t%d\t|\t%d\t|\t%d\t|\n",student_Process[count].process_name,student_Process[count].arrival_time,student_Process[count].burst_time,student_Process[count].completion_time);
     }
