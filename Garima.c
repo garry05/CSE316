@@ -118,9 +118,9 @@ struct process_Struct faculty_Process[no_of_process];
     }
 	while(flag != 0);
 
-    
+    puts("\t                                          ");
     puts("\t***** ROUND ROBIN SCHEDULING FACULTY *****");
-  
+    puts("\t                                          ");
 	     
     printf("\n|Process Name\t|Arrival Time\t|Burst Time\t|Completion Time|\n");
 
