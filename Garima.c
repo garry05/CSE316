@@ -13,7 +13,7 @@ int count, arrival_Time, burst_Time, quantum_time;
 struct process_Struct faculty_Process[no_of_process];
 
     for(count = 0; count < no_of_process; count++) 
-	{
+  {
         printf("Enter the details of Process[%d]", count+1);
         puts("");
         printf("Process Name : ");
@@ -30,23 +30,23 @@ struct process_Struct faculty_Process[no_of_process];
     scanf("%d", &quantum_time);
 
     for(count = 0; count < no_of_process; count++) 
-	{
+  {
     
 	for(int x = count +1; x < count; x++)
-		{
+	{
             if(faculty_Process[count].arrival_time > faculty_Process[x].arrival_time) 
-			{
+	   {
                 temp_Struct = faculty_Process[count];
                 faculty_Process[count] = faculty_Process[x];
                 faculty_Process[x] = temp_Struct;
             }
-        }
+         }
     }
     for(count = 0; count < no_of_process; count++) 
 	{
         faculty_Process[count].remaining = faculty_Process[count].burst_time;
         faculty_Process[count].completion_time = 0;
-    }
+        }
 
     int total_time, queue, round_robin[20];
     total_time = 0;
@@ -64,12 +64,12 @@ struct process_Struct faculty_Process[no_of_process];
                 for(x = 0; x <= queue; x++)
 				{
                     if(round_robin[x] == count)
-					{
+		  {
                         z++;
                     }
                 }
                 if(z == 0)
-				{
+		{
                     queue++; 
                     round_robin[queue] == count;
                 }
@@ -171,7 +171,7 @@ void student_Queue(int no_of_process)
 	{
         student_Process[count].remaining = student_Process[count].burst_time;
         student_Process[count].completion_time = 0;
-    }
+        }
 
     int total_time, queue, round_robin[20];
     total_time = 0;
