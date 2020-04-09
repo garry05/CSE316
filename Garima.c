@@ -26,7 +26,7 @@ struct process_Struct faculty_Process[no_of_process];
         scanf("%d", &faculty_Process[count].burst_time);
         puts("");
     }
-    printf("Now, enter the quantum time for Faculty queue : ");
+    printf("Enter the quantum time for Faculty queue : ");
     scanf("%d", &quantum_time);
 
     for(count = 0; count < no_of_process; count++) 
@@ -86,7 +86,7 @@ struct process_Struct faculty_Process[no_of_process];
         }
         if(n>queue) 
 		{
-            n = (n - 1) % queue;
+            n = (n-1) % queue;
         }
         if(n <= queue) 
 		{
@@ -118,9 +118,9 @@ struct process_Struct faculty_Process[no_of_process];
     }
 	while(flag != 0);
 
-    puts("\t                                          ");
-    puts("\t***** ROUND ROBIN SCHEDULING FACULTY *****");
-    puts("\t                                          ");
+    puts("\t##########################################");
+    puts("\t##### ROUND ROBIN SCHEDULING FACULTY #####");
+    puts("\t##########################################");
 	     
     printf("\n|Process Name\t|Arrival Time\t|Burst Time\t|Completion Time|\n");
 
@@ -150,7 +150,7 @@ void student_Queue(int no_of_process)
         printf("Burst Time : ");
         scanf("%d", &student_Process[count].burst_time);
     }
-    printf("Now, enter the quantum time for Student queue : ");
+    printf("Enter the quantum time for Student queue : ");
     scanf("%d", &quantum_time);
 
 
@@ -243,9 +243,9 @@ void student_Queue(int no_of_process)
     }
 	while(flag != 0);
 
-    puts("\t                                            ");
-    puts("\t\t***** ROUND ROBIN SCHEDULING STUDENT *****");
-    puts("\t                                            ");
+    puts("\t##########################################");
+    puts("\t##### ROUND ROBIN SCHEDULING STUDENT *****");
+    puts("\t##########################################");
 	     
     printf("\n|Process Name\t|Arrival Time\t|Burst Time\t|Completion Time|\n");
 
@@ -264,7 +264,7 @@ int main(int argc, char const *argv[])
     puts("Please choose a queue to post your query : ");
     puts("1. Faculty queue.");
     puts("2. Student queue.");
-    printf("> ");
+    printf("Select any one : ");
     scanf("%d", &select_queue);
 
     switch(select_queue) 
@@ -282,7 +282,7 @@ int main(int argc, char const *argv[])
                 break;
 
         default : 
-                printf("Please selet the correct option.");
+                printf("Please select the correct option.");
     }
     return 0;
 }
